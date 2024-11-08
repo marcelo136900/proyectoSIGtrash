@@ -1,0 +1,16 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-67.1067, -17.9647]
+            },
+            "properties": {
+                "name": "Mercado Campero",
+                "type": "Punto Crítico"
+            }
+        }
+    ]
+}
