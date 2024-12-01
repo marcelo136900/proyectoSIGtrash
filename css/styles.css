@@ -1,0 +1,36 @@
+/* Estilo básico para el mapa */
+#map {
+    height: 600px;
+    width: 100%;
+}
+
+/* Botón flotante para volver arriba */
+#backToTop {
+    display: none; /* Oculto inicialmente */
+    position: fixed; /* Flota sobre la página */
+    bottom: 20px; /* Margen inferior */
+    right: 20px; /* Margen derecho */
+    z-index: 1000; /* Encima de otros elementos */
+    background-color: rgba(0, 123, 255, 0.5); /* Transparente */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Forma circular */
+    padding: 15px; /* Tamaño del botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    cursor: pointer;
+    opacity: 0; /* Invisible inicialmente */
+    transform: translateY(50px); /* Posición inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Hover: Incrementar opacidad y cambiar color */
+#backToTop:hover {
+    background-color: rgba(0, 123, 255, 1); /* Sin transparencia */
+}
+
+/* Mostrar el botón */
+#backToTop.show {
+    display: block; /* Se muestra */
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Posición original */
+}

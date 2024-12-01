@@ -24,3 +24,33 @@ L.polyline(rutaRecoleccion, {color: 'blue'}).addTo(map);
 puntoCritico.on('click', function () {
     map.setView(puntoCritico.getLatLng(), 16);
 });
+
+//dirigir a seccion de la pagina
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Selecciona el botón
+const backToTop = document.getElementById('backToTop');
+
+// Mostrar/ocultar el botón según el scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Si se scrollea más de 300px
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+});
+
+// Volver al inicio al hacer clic
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Efecto de desplazamiento suave
+    });
+});
